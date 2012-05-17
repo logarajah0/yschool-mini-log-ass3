@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Title</title>
+    </h:head>
+    <h:body>
+        <center>
+            <h1> Student Search Successful</h1>
+
+            <h:form> 
+                <table border="1">
+                    <thead>
+                        <tr>
+                            <th>Attribute</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <h:message for="#{null}" />
+                        <tr>
+                            <td>
+                                <h:outputText value="First Name:"/>
+                            </td>
+                            <td>
+                                <p:inputText value="#{studentManagedBean.searchedStudent.firstname}"/>
+                            </td></tr>
+                            <tr>
+                                <td>
+                                    <h:outputText value="Last Name:"/>
+                                </td>
+                                <td>
+                                    <p:inputText value="#{studentManagedBean.searchedStudent.lastname}"/> 
+                                </td></tr>
+                                <tr><td>
+                                        <h:outputText value="Address:"/></td><td>
+                                        <p:inputText value="#{studentManagedBean.searchedStudent.address}" />
+                                        </td></tr>
+                                    <tr><td>
+                                            <h:outputText value="Grade:"/></td>                                       
+                                             <td><h:selectOneMenu id="grade" value="#{studentManagedBean.grade}">
+                                                <f:selectItem itemLabel="1" itemValue="1" />
+                                                <f:selectItem itemLabel="2" itemValue="2" />
+                                                <f:selectItem itemLabel="3" itemValue="3" />
+                                                <f:selectItem itemLabel="4" itemValue="4" />
+                                                <f:selectItem itemLabel="5" itemValue="5" />
+                                                <f:selectItem itemLabel="6" itemValue="6" />
+                                                <f:selectItem itemLabel="7" itemValue="7" />
+                                                <f:selectItem itemLabel="8" itemValue="8" />
+                                                <f:selectItem itemLabel="9" itemValue="9" />
+                                                <f:selectItem itemLabel="10" itemValue="10" />
+                                                <f:selectItem itemLabel="11" itemValue="11" />
+                                                <f:selectItem itemLabel="12" itemValue="12" />
+                                                <f:selectItem itemLabel="13" itemValue="13" />                        
+                                            </h:selectOneMenu>
+                                        </td>
+                                    </tr>
+                        
+                    </tbody>
+                               
+                          </table>
+                <h:commandButton value="Back" action="index" />
+                    </h:form>
+             
+              </center>
+        </h:body>
+   </html>
+
